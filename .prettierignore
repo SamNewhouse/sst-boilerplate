@@ -1,0 +1,8 @@
+.build
+.github
+.sst
+node_modules
+.prettierrc
+.env
+.env.*
+tsconfig.json
