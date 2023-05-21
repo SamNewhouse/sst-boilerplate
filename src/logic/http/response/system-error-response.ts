@@ -5,10 +5,5 @@ export const systemErrorResponse = (
   body?: unknown,
   headers?: ResponseHeaders,
 ): ApiResponse => {
-
-  return response(
-    500,
-    body,
-    headers,
-  );
+  return response(500, body, headers);
 };

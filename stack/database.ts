@@ -34,7 +34,7 @@ export function DatabaseStack({ stack }: StackContext) {
       new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
         actions: ["dynamodb:Query", "dynamodb:UpdateItem"],
-        resources: [exampleTable.cdk.table.tableArn]
+        resources: [exampleTable.cdk.table.tableArn],
       }),
     ],
   });
@@ -46,13 +46,13 @@ export function DatabaseStack({ stack }: StackContext) {
           function: exampleApiHandler,
         },
       },
-    }
+    },
   });
 
   const outputs = {
     exampleTableName: exampleTable.cdk.table.tableName,
     exampleTableArn: exampleTable.cdk.table.tableArn,
-    exampleApiUrl: exampleApi.url
+    exampleApiUrl: exampleApi.url,
   };
 
   stack.addOutputs(outputs);
