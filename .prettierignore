@@ -1,0 +1,10 @@
+.build
+.github
+.sst
+node_modules
+.prettierrc
+.env
+.env.*
+package-lock.json
+package.json
+tsconfig.json

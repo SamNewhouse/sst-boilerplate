@@ -7,12 +7,10 @@ export type OriginClientApiResponse = {
 };
 
 export interface OriginClient {
-  makeRequest: (
-    data: {
-      query: { [name: string]: string | undefined } | null;
-      body: string | null;
-    },
-  ) => Promise<OriginClientApiResponse>;
+  makeRequest: (data: {
+    query: { [name: string]: string | undefined } | null;
+    body: string | null;
+  }) => Promise<OriginClientApiResponse>;
 }
 
 export type ApiEvent = APIGatewayProxyEvent;
